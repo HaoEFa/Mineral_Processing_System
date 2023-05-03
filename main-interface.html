@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/canvas.css">
+    <link rel="stylesheet" href="./css/canvas_button.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="./js/main-interface_js/button_increase.js"></script> 
+</head>
+<body> 
+    <div class="contain">
+        <!-- 左右面板 -->
+        <div class="canvas_left">
+             <span>437AI模式正常</span>
+             <span>438AI模式正常</span>
+             <span>浮选柱AI模式正常</span>
+        </div>
+        <div class="canvas_right">
+            <span>437尾矿仪启动</span>
+            <span>438尾矿仪启动</span>
+            <span>浮选柱尾矿仪启动</span>
+        </div>
+        <!-- 左侧按钮 -->
+        <!-- 数值部分 -->
+         <div class="left_values valuesOne">煤泥水</div>
+         <div class="left_values valuesTwo">煤泥水</div>
+         <div class="left_values valuesThree">煤泥水</div>
+        <!-- 按钮部分 -->
+        <!-- 1. -->
+         <div class="left_button buttonOne">
+             <span>
+                <div>捕收剂</div>
+                <button>增加</button>
+                <div>0.0</div>
+                <button>减小</button>
+             </span>
+             <span></span>
+             <span>
+                <div>起泡剂</div>
+                <button>增加</button>
+                <div>0.0</div>
+                <button>减小</button>
+             </span>
+         </div>
+         <!-- 2. -->
+         <div class="left_button buttonTwo">
+            <span>
+                <div>捕收剂</div>
+                <button class="button_increase">增加</button>
+                <div class="incr_values">0.0</div>
+                <button class="">减小</button>
+             </span>
+             <span></span>
+             <span>
+                <div>起泡剂</div>
+                <button class="button_increase">增加</button>
+                <div class="incr_values">0.0</div>
+                <button class="button_reduce">减小</button>
+             </span>
+        </div>
+        <!-- 3. -->
+        <div class="left_button buttonThree">
+            <span>
+                <div>捕收剂</div>
+                <button>增加</button>
+                <div class="incr_values">0.0</div>
+                <button class="button_reduce">减小</button>
+             </span>
+             <span></span>
+             <span>
+                <div>起泡剂</div>
+                <button class="button_increase">增加</button>
+                <div>0.0</div>
+                <button>减小</button>
+             </span>
+        </div>
+        <!-- 中部标识部分 -->
+           <!-- 数值 -->
+            <aside class="middle_values middle_values_one">8.00 l/h</aside>
+            <aside class="middle_values middle_values_two">8.00 l/h</aside>
+            <aside class="middle_values middle_values_three">8.00 l/h</aside>
+            <aside class="middle_values middle_values_four">8.00 l/h</aside>
+            <aside class="middle_values middle_values_five">8.00 l/h</aside>
+            <aside class="middle_values middle_values_six">8.00 l/h</aside>
+        <!-- 右部标识部分 -->
+           <!-- 预处理器 -->
+        <header class="processor processor_one">预处理器</header>
+        <header class="processor processor_two">预处理器</header>
+        <header class="processor processor_three">预处理器</header>
+           <!-- 试剂 -->
+        <aside class="reagent reagent_one">捕获剂1</aside>
+        <aside class="reagent reagent_two">捕获剂2</aside>
+        <aside class="reagent reagent_three">起泡剂</aside>
+        <!-- 右图例部分 -->
+          <!-- 1. -->
+               <div class="right_legend legend_one">
+                   <span>450.1m^3/h</span>
+                   <img src="./imgMainInterface/样例三.png" alt="">
+                   <div></div>
+                   <span>450.1m^3/h</span>
+                   <img src="./imgMainInterface/样例三.png" alt="">
+                   <div></div>
+                   <span>450.1m^3/h</span>
+                   <img src="./imgMainInterface/样例三.png" alt="">
+               </div>
+          <!-- 2. -->
+               <div class="right_legend legend_two">
+                <span>66.7</span>
+                <img src="./imgMainInterface/样例二.png" alt="">
+                <div></div>
+                <span>68.1 g/l</span>
+                <img src="./imgMainInterface/样例二.png" alt="">
+                <div></div>
+                <span>58.1 g/l</span>
+                <img src="./imgMainInterface/样例二.png" alt="">
+               </div>
+          <!-- 3. -->
+               <div class="legend_three legend_three_top">
+                     <img src="./imgMainInterface/样例四.png" alt="">
+                     <span>437</span>
+               </div> 
+               <div class="legend_three legend_three_middle">
+                <img src="./imgMainInterface/样例四.png" alt="">
+                <span>438</span>
+               </div>
+               <div class="legend_three legend_three_bottom">
+                <img src="./imgMainInterface/样例五.png" alt="">
+                <span>浮选柱</span>
+               </div>
+        <!-- 画布 -->
+         <canvas id="cont" width="1400px" height="800px">
+          
+         </canvas>
+         
+    </div>
+    <!-- 作图 -->
+    <script>
+        // 画直线方法
+        function DrawLine(startX, startY, endX, endY) {
+        // 1.获取画布
+        var canvas = document.getElementById('cont')
+        // 2.建立画布对象
+        var ctx = canvas.getContext('2d')
+        // 直线对象
+        // 3.开始画线
+        ctx.beginPath()
+        // 4.定起点
+        ctx.moveTo(startX, startY)
+        // 5.定结束点
+        ctx.lineTo(endX, endY)
+        // 6.上色
+        ctx.stroke()
+        // 7.结束划线
+        ctx.closePath()
+        }
+       //  画三角方法
+       function DrawTriangle(startX, startY, end1X, end1Y, end2X, end2Y) {
+        // 1.获取画布
+        var canvas = document.getElementById('cont')
+        // 2.建立画布对象
+        var context = canvas.getContext('2d')
+        // 绘制三角
+        context.beginPath();
+        context.moveTo(startX, startY);
+        context.lineTo(end1X, end1Y);
+        context.lineTo(end2X, end2Y);
+        context.closePath();
+        // 描边
+        context.stroke();
+       } 
+     //  画圆弧方法
+     function drawArc() {
+        // 1.获取画布
+        var canvas = document.getElementById('cont')
+        // 2.建立画布对象
+        var context = canvas.getContext('2d')
+        // 绘制完整圆
+        context.beginPath();
+        context.arc(150, 75, 50, 0, Math.PI * 2);
+        context.stroke();
+     }  
+    //  画矩形方法
+      function drawRect(x, y, width, height) {
+         // 1.获取画布
+         var canvas = document.getElementById('cont')
+        // 2.建立画布对象
+        var context = canvas.getContext('2d')
+        // 矩形
+        context.rect(x, y, width, height);
+        context.stroke();
+      } 
+        // 作画部分 
+
+        // 直线作画
+        DrawLine(220, 200, 50, 200)
+        DrawLine(220, 400, 50, 400)
+        DrawLine(220, 600, 50, 600)
+
+        // 三角形作画
+        DrawTriangle(220, 190, 240, 200, 220, 210)
+        DrawTriangle(220, 390, 240, 400, 220, 410)
+        DrawTriangle(220, 590, 240, 600, 220, 610)
+
+        // 矩形作画
+        drawRect(240, 125, 100, 150)
+        drawRect(240, 325, 100, 150)
+        drawRect(240, 525, 100, 150)
+        
+        // 中直线部分
+        // 上部
+        // 附加
+        DrawLine(700, 190, 550, 190)
+        DrawLine(700, 135, 700, 190)
+        DrawLine(700, 135, 700, 190)
+        DrawLine(875, 135, 875, 180)
+        // 1.
+        DrawLine(400, 150, 340, 150)
+        DrawLine(400, 180, 400, 150)
+        DrawLine(875, 180, 400, 180)
+        // 2.
+        DrawLine(400, 200, 340, 200)
+        DrawLine(400, 230, 400, 200)
+        DrawLine(550, 230, 400, 230)
+        // 3.
+        DrawLine(300, 275, 300, 295)
+        DrawLine(875, 295, 300, 295)
+
+        // 中部
+        // 1.
+        DrawLine(400, 350, 340, 350)
+        DrawLine(400, 380, 400, 350)
+        DrawLine(850, 380, 400, 380)
+        // 2.
+        DrawLine(400, 400, 340, 400)
+        DrawLine(400, 430, 400, 400)
+        DrawLine(550, 430, 400, 430)
+        // 3.
+        DrawLine(300, 475, 300, 495)
+        DrawLine(875, 495, 300, 495)
+
+        // 下部
+        // 1.
+        DrawLine(400, 550, 340, 550)
+        DrawLine(400, 580, 400, 550)
+        DrawLine(850, 580, 400, 580)
+        // 2.
+        DrawLine(400, 600, 340, 600)
+        DrawLine(400, 630, 400, 600)
+        DrawLine(550, 630, 400, 630)
+        // 3.
+        DrawLine(300, 675, 300, 695)
+        DrawLine(875, 695, 300, 695)
+
+        // 中竖线部分
+        DrawLine(550, 135, 550, 630)
+        DrawLine(850, 180, 850, 580)
+
+        // 中矩形部分
+        drawRect(500, 10, 100, 125)
+        drawRect(650, 10, 100, 125)
+        drawRect(825, 10, 100, 125)
+
+        // 右直线部分
+        // 1.
+        DrawLine(975, 295, 925, 295)
+        DrawLine(1090, 295, 1020, 295)
+        // DrawLine(1160, 295, 1110, 295)
+        // 2.
+        DrawLine(975, 495, 925, 495)
+        DrawLine(1090, 495, 1020, 495)
+        // DrawLine(1160, 495, 1110, 495)
+        // 3.
+        DrawLine(975, 695, 925, 695)
+        DrawLine(1090, 695, 1020, 695)
+        // DrawLine(1160, 695, 1110, 695)
+    </script>
+    
+</body>
+</html>

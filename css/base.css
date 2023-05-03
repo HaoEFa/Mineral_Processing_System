@@ -1,0 +1,73 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+dl,
+dd,
+dt,
+input,
+ol
+{   padding: 0px;
+    margin: 0px;
+
+ }
+ /* 取消默认相关间隙  */
+ body{
+     color: #333;
+     font:16px/1.5 sans-serif;
+ }
+ /* 去除列表的序号与小标 */
+ ul,
+ ol,
+ li{
+     list-style: none;
+     /* list-style-type: style;; */
+ }
+ /* 去除a标签的下划线与颜色 */
+ a{
+     text-decoration: none;
+     color: #333;
+ }
+ /* 去除倾斜 */
+ em,
+ i{
+      font-style:normal ;
+ }
+ /* 设置img居中对齐，取消默认间隙 */
+ img{
+     vertical-align: middle;
+ }
+ /* 取消被选中后显示的边框，  */
+ input{
+     /* 去除边框 */
+  border: none;
+  /* 去除选中边框 */
+  outline: none;
+  color: #333;
+ }
+ /* 左浮动 */
+.fl{
+    float: left;
+}
+ /* 右浮动 */
+ .fr{
+     float: right;
+ }
+ /* 清除浮动并且解决margin塌陷问题 */
+ .clearfix::before,
+ .clearfix::after{
+     content: "";
+     display: table;
+ }
+.clearfix::after{
+    clear: both;
+}
+body{
+    background-color: #f5f5f5;
+}

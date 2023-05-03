@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <style>
+        * {
+         margin: 0;
+         padding: 0;
+     }   
+    .box {
+        width: 400px;
+        margin: 100px auto;
+    }
+    .box thead {
+        width: 100%;
+        height: 30px;
+    }
+    .box thead tr {
+        display: flex;
+    }
+    .box thead th {
+        height: 30px;
+        flex: 1;
+        border: 1px solid black;
+    }
+    .box thead th:nth-child(2) {
+        flex: 3;
+    }
+    .box tbody {
+        display:block;
+        width: 100%;
+        height: 30px;
+        background-color: white;
+    }
+    .box tbody tr {
+        display: flex;
+    }
+    .box tbody td:nth-child(2) {
+        flex: 3;
+    }
+    .box tbody td {
+        height: 30px;
+        flex: 1;
+        border: 1px solid black;
+        border-top: 0px;
+    }
+    /*  */
+    .tab {
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 300px;
+    margin: 100px auto;
+    }
+    .tab #tab_list {
+     flex: 1;   
+     background-color: white;
+     width: 100%;
+    height: 100%;
+    }
+    .tab #tab_list ul {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-bottom:  4px solid brown;
+        background-color: silver;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    #tab_list ul li {
+        flex: 1;
+    }
+/* 2. */
+    .tab #tab_con {
+     flex: 8;   
+     background-color: burlywood;
+    }
+    ul,li {
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+    .current {
+        background-color: red;
+    }
+    .item {
+        display: none;
+        width: 100px;
+        height: 400px;
+    }
+    
+    </style>
+</head>
+<body>
+    <section class="tab">
+        <div id="tab_list">
+        <ul>
+            <li>
+                用户页面
+            </li>
+            <li>图书 模块</li>
+            <li>美食模块</li>
+        </ul>
+        </div>
+        <div id="tab_con">
+         <ul>
+             <li class="item">
+                
+             </li>
+             <li class="item">
+                 
+            </li>
+             <li class="item">
+                <table class="box" >
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>食物</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    </table>
+             </li>
+         </ul>
+        </div>
+    </section>
+    <script>
+    // 切换页面模块 
+    (function(){
+    var tab_list = document.getElementById('tab_list');
+    var lis = tab_list.querySelectorAll('li');
+    var tab_con = document.getElementById('tab_con');
+    var items = tab_con.querySelectorAll('li');
+    items[0].style.display = 'block';
+    lis[0].style.backgroundColor = 'red';
+    // 遍历伪数组
+    for(var i = 0; i < lis.length; i++) {
+    lis[i].setAttribute('index',i);
+    lis[i].onclick = function() {
+    for(i = 0; i < lis.length; i++) {
+    lis[i].style.backgroundColor = '';
+    }
+    this.style.backgroundColor = 'red';
+    var index = this.getAttribute('index');
+    for(var j = 0; j < items.length; j++) {
+    items[j].style.display = 'none';
+    } 
+     items[index].style.display = 'block';
+    }
+    }
+    }())
+    // 控制用户模块
+    (function(){
+        var datas = 
+            [{
+             age: '123456',
+             shu: '西瓜',
+             } , {
+             
+             age: '123456',
+             shu: '涮羊肉',
+            },{
+            
+             age: '123456',
+             shu: '烧烤',
+            },{
+                     
+             age: '123456',
+             shu: '新疆大盘鸡',
+            },
+            {
+            
+             age: '123456',
+             shu: '肠旺面',
+            },{
+            
+             age: '123456',
+             shu: '火锅',
+            }
+        ];
+       var tbody = document.querySelector('tbody');  
+       for(var i = 0; i < datas.length; i++) { 
+       var tr = document.createElement('tr');
+       tbody.appendChild(tr);
+       for(var k in datas[i]) {
+       var td = document.createElement('td');
+       // 获取属性名：k
+       // 获取属性值：obj[k]
+       td.innerHTML = datas[i][k];    
+       tr.appendChild(td);       
+       } 
+       var td = document.createElement('td');
+       td.innerHTML = '<a href="javascript:;">删除</a>';
+       tr.appendChild(td);
+       td.onclick = function() {
+       tbody.removeChild(this.parentNode);
+       }
+       }
+    }())
+    
+    </script>
+</body>
+</html>
