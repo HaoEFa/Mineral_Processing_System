@@ -1,0 +1,311 @@
+/* 1.网站入口 */
+.xtx-entry{
+    height: 512px;
+    background-color: #f5f5f5;
+}
+.xtx-entry .container{
+    position: relative;
+    height: 512px;
+    background-color: white;
+}
+/* 侧边栏 */
+.xtx-entry .container .banner img{
+    display: inline-block;
+    width: 1240px;
+    height: 512px;
+    /* background: url(../lunbotu/2.webp); */
+    background-size: 100% 100%;
+}
+.xtx-entry .container .lunbo {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 600%;
+}
+.xtx-entry .container .lunbo  li {
+    float: left;
+    /* width: 1000px; */
+}
+.xtx-entry .category{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    line-height: 64px;
+    box-sizing: border-box;
+    width: 251px;
+    height: 512px;
+    background-color: rgba(0, 0, 0, .1);
+}
+.xtx-entry .category a{
+    display: inline-block;
+    width: 100%;
+    height: 64px;
+    color: white;
+}
+.xtx-entry .category span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+.xtx-entry .category .sp{
+    margin-left:75px; 
+    font-size: 18px;
+    color: white;
+}
+.xtx-entry .category li{
+    padding-left: 36px;
+}
+.xtx-entry .category li:hover{
+    background-color: #27ba9b;
+}
+/* 左右按钮*/
+.xtx-entry .leftbottom {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 233.5px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(250, 248, 248, 0.349);
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    color: white;
+    border-radius: 100% 100%;
+}
+.xtx-entry .leftbottom:hover {
+    background-color: rgba(226, 202, 202, 0.1);
+}
+.xtx-entry .rightbottom{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 233.5px;
+    width: 45px;
+    height: 45px;
+    color: white;
+    text-align:center;
+    line-height:40px;
+    font-size: 25px;
+    background-color:rgba(250, 248, 248, 0.349);
+    border-radius:100% 100%;
+}
+.xtx-entry .rightbottom:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.xtx-entry .indicator {
+    position: absolute;
+    left:635px;
+    bottom: 43px;
+    width:111px;
+    height:9px;
+}
+.xtx-entry .indicator li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color: rgba(255, 255, 255, 0.43);
+}
+.xtx-entry .indicator li:nth-child(-n+4){
+    margin-right: 15px;
+}
+.xtx-entry .indicator li.active {
+    background-color: white;
+}
+/* 轮播图 */
+.lunbo {
+    overflow: hidden;
+}
+/* 三、网站介绍 */
+/*1. 新鲜好物模块 */
+.xtx-new-goods{
+    box-sizing: border-box;
+    height: 520px;
+    background-color: skyblue;
+}
+.xtx-new-goods .goods-hd{
+    height: 115px;
+    background-color: #f5f5f5;
+    line-height: 115px;
+}
+.xtx-new-goods .goods-hd a{
+    margin-left: 100px;
+    font-size: 16px;
+    color:darkgrey;
+}
+.xtx-new-goods .goods-hd h2{
+    height: 115px;
+}
+.xtx-new-goods .goods-hd span{
+    margin-left: 10px;
+    font: normal normal 18px 楷体;
+    color: darkgrey;
+}
+.xtx-new-goods .goods-hd a::after{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    background-color: white;
+    background: url(../images/0fa9a1488c141072e981cddcf6946259.jpeg);
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+/* 列表 */
+.xtx-new-goods .goods-list{
+    height: 405px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+.xtx-new-goods .goods-list li{
+    float: left;
+    width: 304px;
+    height: 405px;
+    background-color: white;
+    margin-right: 8px;
+    text-align: center;
+}
+.xtx-new-goods .goods-list li:nth-last-child(1){
+    margin: 0px;
+}
+.xtx-new-goods .goods-list li img{
+    width: 100%;
+}
+.xtx-new-goods .goods-list li .tl{
+    width: 100%;
+    height: 100%;
+}
+.xtx-new-goods .goods-list li{
+    font-size: 20px;
+}
+.xtx-new-goods .goods-list  p:nth-of-type(2n){
+    font-size: 20px;
+    color: thistle;
+} 
+.xtx-new-goods .goods-list  p:nth-of-type(n+3){
+    margin-top: 10px;
+    font-size: 20px;
+    color: orange;
+} 
+/* 2.手机模块 */
+.xtx-new-phone{
+    box-sizing: border-box;
+    height: 771px;
+    background-color: skyblue;
+}
+  /* 顶部 */
+.xtx-new-phone .goods-hd{
+    height: 115px;
+    background-color: #f5f5f5;
+    line-height: 115px;
+}
+
+.xtx-new-phone .goods-hd h2{
+    height: 115px;
+}
+
+.xtx-new-phone .goods-hd span{
+    margin-left: 10px;
+    font:normal normal 18px 楷体;
+    color: darkgrey;
+}
+/* 列表 */
+.xtx-new-phone .goods-list{
+    
+    height: 656px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+.xtx-new-phone .goods-list li:nth-of-type(1){
+    float: left;
+    width: 304px;
+    height: 656px;
+    background-color: white;
+    margin-right: 8px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(n+2){
+    float: left;
+    width: 304px;
+    height: 320px;
+    background-color: white;
+    margin-right: 8px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(n) img{
+    width: 100%;
+    height: 257px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+ }
+.xtx-new-phone .goods-list li{
+   text-align: center;
+}
+.xtx-new-phone .goods-list li span{
+    display: block;
+    margin-top: 8px;
+    color: orange;
+}
+.xtx-new-phone .goods-list li:nth-of-type(1+n) {
+   text-align: center;
+}
+.xtx-new-phone .goods-list li:nth-of-type(4){
+    margin-right: 0px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(7){
+    margin-top: 16px;
+    margin-right: 0px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(5){
+    margin-top: 16px;
+}
+.xtx-new-phone .goods-list li:nth-of-type(6){
+    margin-top: 16px;
+}
+/* 四、网站的侧边导航 */
+.SideNav{
+    position: fixed;
+    background-color: white;
+    width: 100px;
+    height: 300px;
+    top: 250px;
+    right: 0px;
+    box-sizing: border-box;
+}
+.SideNav ul li{
+    display: block;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    border-bottom: 2px solid #f5f5f5;
+}
+.SideNav ul li:nth-last-child(1){
+    border-bottom: 0px;
+}
+.SideNav li a{
+    display: block;
+    width: 100px;
+    height: 58px;
+    line-height: 58px;
+    transition: all .8s;
+}
+.SideNav li a:hover{
+    color: orange;
+}
+.SideNav li:nth-child(1) a{
+    
+}
+.SideNav li:nth-child(1) a:hover::before{
+    position: fixed;
+    content: "";
+    width: 100px; top: 250px;
+    right: 100px;
+    height: 100px;
+    background: url(../images/u=1126621969\,1526220417&fm=26&fmt=auto.webp);
+    z-index: 1;
+    background-size:100% 100%;
+    
+}
+
+ 

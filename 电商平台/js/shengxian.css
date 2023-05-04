@@ -1,0 +1,381 @@
+.farflexcolumn{
+    display: flex;
+    flex-direction: column;
+     justify-content: space-evenly; 
+  
+}
+.farflex{
+    display: flex;
+}
+/* 公共部分 */
+.leftborder2px{
+    border-left: 2px solid #e7e7e7;
+}
+.rightborder2px{
+    border-right: 2px solid #e7e7e7;
+}
+.buttomborder2px{
+    border-bottom: 2px solid #e7e7e7;
+}
+.topborder2px{
+    border-top: 2px solid #e7e7e7;
+}
+.orange{
+    color: orange;
+   
+}
+.red{
+    color: red;
+}
+.silver{
+    color: silver;
+}
+.fontsize15{
+    font-size: 15px;
+}
+.fontsize20{
+    font-size: 20px;
+}
+.fontsize27{
+    font-size: 27px;
+}
+.marbutfive{
+    margin-bottom: 5px;
+}
+.marbut18{
+    margin-bottom: 18px;
+}
+/* 2.主体部分 */
+.xtx_goods{
+    padding: 30px 0px 85px 0px;
+    box-sizing: border-box;
+   
+}
+
+/* 左侧栏 */
+/* （1） */
+
+.xtx_goods .lenav{
+    width: 219PX;
+    height: 1040PX;
+    background-color: white;
+    box-sizing: border-box;
+    margin-right: 22px;
+}
+.navtop {
+    border-bottom: 4px solid #e7e7e7;
+    box-sizing: border-box;
+     padding:50px ;
+     display: flex; 
+     flex-direction: column;
+     align-items: center;
+    /* flex-wrap: wrap; */
+}
+.lenav{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.navtobu{
+width: 100%;
+height: 230px;
+background-color: white;
+
+}
+.navmiddle{
+    border-bottom: 4px solid #e7e7e7;
+    background-color: white;
+   flex: 1;
+}
+.xtx_goods .navtop img{
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+ }
+ .xtx_goods .navtop a:nth-child(1){
+    display: block;
+    width: 90px;
+    height: 90px;
+ }
+ .xtx_goods .navtop p{
+     display: block;
+     height: 20px;
+    
+ }
+ .xtx_goods .navtop>a:nth-child(3){
+   display: block;
+   width: 85px;
+   height: 24px;
+   border-radius: 15px;
+   background-color:tomato;
+   text-align: center;
+}
+ /*（2）*/
+
+ .lenav .navmiddle ul{
+ height: 450px;
+ }
+ .lenav .navmiddle{
+  padding: 20px 0px 0px 35px;
+  box-sizing: border-box;
+ }
+ .lenav .navmiddle li{
+   width: 100px;
+   height: 20px;
+ }
+ .lenav .navmiddle a{
+    margin-left: 5px;
+    text-align:right;
+    display: inline-block;
+    width: 100%;
+    height: 100%px;
+    background-color: white;
+ }
+ .lenav .navmiddle li:hover a{
+     color: chartreuse;
+ }
+ .lenav .navmiddle li:hover a::before{
+       display: inline-block;
+       content: "";
+       width:  10px;
+       height: 10px;
+       border-radius: 100%;
+       background: chartreuse;
+       margin-right: 10px;
+ }
+/* (3) */
+ .xtx_goods>a:nth-child(2){
+     display: inline-block;
+     border-radius: 10px;
+     width: 20px;
+     height: 15px;
+     background-color: tomato;
+ }
+ /* （4） */
+ .lenav .navbuttom{
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+     padding: 20px 0px 0px 35px;
+ }
+ .lenav .navbuttom h3{
+     width: 100%;
+     height: 28px;
+ }
+ .lenav .navultwo{
+     padding-bottom: 20px;
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     
+     justify-content: space-evenly;   
+ }
+ .lenav .navultwo a{
+     text-align: right;
+    width: 100px;
+    display: block;
+    height: 24px;
+ }
+ .lenav .navultwo li:hover a{
+    
+    color: chartreuse;
+    
+}
+ .lenav .navultwo li:hover a::before{
+     content: "";
+     display: inline-block;
+     width:10px ;
+     height: 10px;
+     border-radius: 100%;
+     background-color: chartreuse;
+     margin-right: 8px;
+ }
+ 
+ .lenav .navultwo a:nth-last-child(1) span{
+     margin-right: 15px;
+ }
+ .lenav .navultwo li{
+     /* flex:1; */
+     
+ }
+ /* 3.用户概览模块 */
+.secuser{
+    display: inline-block;
+    width: 100%;
+    height: 132PX;
+    background-color: aqua;
+}
+.secuser .divuser{
+    display: flex;
+    width:100%;
+    height: 132px;
+    background-color: white;
+    margin-bottom: 18px;
+    padding: 20px 0px 20px 0px;
+    box-sizing: border-box;
+}
+.secuser .divuser a{
+    display: inline-block;
+    height: 100%;
+    width: 171px;
+    /* background-color: blue; */
+}
+.secuser .divuser>div{
+    box-sizing: border-box;
+    flex:1;
+}
+.secuser .divuser>div:nth-child(1){
+    border-right: 2px solid #e7e7e7;
+}
+.divuser .sonuser{
+    text-align: center;
+}
+/* 三个订单模块 */
+/*  */
+.secuser .usernav{
+    box-sizing: border-box;
+    padding:10px ;
+    width: 100%;
+    height: 285px;
+    background-color: white;
+}
+.secuser .usernavone div{
+    height: 104px; 
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+}
+.secuser .usernavone div:nth-child(1){
+    
+    justify-content: space-between;
+}
+.secuser .usernavone div:nth-child(1) div{
+    line-height: 50px;
+    width: 171px;
+    height: 100%;
+    background-color: white;
+}
+.secuser .usernavone div:nth-child(1){
+    height: 50px;
+}
+.secuser .usernavone div:nth-child(1) div:nth-child(2){
+    height: 100%;
+    text-align: right;
+}
+.secuser .usernavone div:nth-child(2) a:hover{
+    color: orange;
+}
+.usernavone div:nth-of-type(n+2) nav{
+    display: flex;
+    width: 672px; 
+    height: 100%; 
+    
+}
+.usernavone div:nth-of-type(n+2) nav nav{
+   width:336px;
+   height: 100%;
+   background-color: white;
+   
+}
+.usernavone div:nth-of-type(n+2) nav div{
+    width: 168px;
+    height: 100%;
+    background-color: white;
+}
+.usernavone div:nth-of-type(n+2) section{
+    width: 336px; 
+    height: 100%; 
+   
+}
+.usernavone div:nth-of-type(n+2) nav nav p{
+    height: 60px;
+    margin-top: 20px;
+  /* line-height: 102px;  */
+}
+.usernavone div:nth-of-type(n+2) nav div{
+text-align: right;
+}
+.usernavone div:nth-of-type(n+2) .paysmall{
+    width: 168px;
+    height: 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+     
+    /* box-sizing: border-box; */
+}
+.usernav .paysmalltwo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+   justify-content: center;
+}
+.usernav .paysmalltwo span{
+    text-align: center;
+    width: 100% ;
+   height: 25px;
+   font-size: 15px;
+}
+.usernavone .a-bigone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.usernavone .a-smallone{
+    display: block;
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: whitesmoke;
+    background-color:lightskyblue;
+    line-height:30px ;
+}
+.usernavone .a-smalltwo{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+.usernavone .a-bigone a:hover{
+    color: orange;
+}
+/* 收藏，足迹 */
+
+.secuser .usernavtwo{
+    
+   padding: 10px;
+}
+.secuser .shouzuone{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+.secuser .shouzutwo{
+    display: flex;
+    width: 100%;
+    height: 215px;
+    background-color: white;
+    
+}
+.shouzutwo .goods{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.shouzutwo .goods a{
+    display: block;
+    width: 200px;
+    height: 110px;
+    align-self: center;
+}
+.shouzutwo .goods p{
+    align-self: center;
+    margin-top: 10px;
+}
+.shouzutwo .goods img{
+    width: 200px;
+    height: 110px;
+}
