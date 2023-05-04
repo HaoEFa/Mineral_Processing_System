@@ -1,0 +1,29 @@
+.loginbox {
+  // 表单样式
+  .ant-input, .ant-input-password {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #1890ff;
+    color: #fff;
+    height: 38px;
+  }
+  // 单独控制密码盒子的高度
+  .ant-input-password .ant-input{
+    height: 28px;
+  }
+  // 输入框的placehoider样式
+  .ant-input::-webkit-input-placeholder {
+    color: rgba(24, 144, 255, .7);
+  }
+  // 眼睛样式
+  .ant-input-suffix svg {
+    color: #1890ff;
+  }
+  // 控制验证码盒子
+  .captchaBox {
+    display: flex;
+    .captchaBox-Img {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+}

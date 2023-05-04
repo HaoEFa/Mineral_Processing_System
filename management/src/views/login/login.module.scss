@@ -1,0 +1,40 @@
+.loginPage{
+    position: relative;
+    .loginBox{
+        width: 450px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color:#fff;
+  
+        h1{
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+            color:#fff;
+        }
+        p{
+            text-align: center;
+            margin: 20px 0;
+        }
+        .title{
+            margin-bottom: 40px;
+            position: relative;
+            &:before,&:after{
+                content:"";
+                width: 100px;
+                height: 2px;
+                position: absolute;
+                background: linear-gradient(to right,rgba(255,255,255,0),#1976D2);
+                left: -20px;
+                top:18px;
+            }
+            &:after{
+                left: auto;
+                background: linear-gradient(to left,rgba(255,255,255,0),#1976D2);
+                right: -20px;
+            }
+        }
+    }
+  }
